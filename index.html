@@ -32,6 +32,16 @@
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <div class="theme-toggle" id="theme-toggle">
+                        <div class="toggle-track">
+                            <div class="toggle-thumb">
+                                <i class="fas fa-sun sun-icon"></i>
+                                <i class="fas fa-moon moon-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
@@ -349,27 +359,26 @@
                     </div>
                 </div>
 
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contact-form">
+                <div class="contact-form">
+                    <form id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">Your Name</label>
+                            <input type="text" name="name" required placeholder=" ">
+                            <label>Your Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">Your Email</label>
+                            <input type="email" name="email" required placeholder=" ">
+                            <label>Your Email</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
-                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" required placeholder=" ">
+                            <label>Subject</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <label for="message">Your Message</label>
+                            <textarea name="message" rows="5" required placeholder=" "></textarea>
+                            <label>Your Message</label>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <span class="btn-text">Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
+                            <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
                 </div>
@@ -381,8 +390,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Aditya Prakash Srivastava. All rights reserved.</p>
-                <!-- <p>Built with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p> -->
+                  <p>&copy; 2025 Aditya Prakash Srivastava</p>
+                <p>All rights reserved.</p>
             </div>
         </div>
     </footer>

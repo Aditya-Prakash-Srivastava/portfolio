@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializePortfolio() {
     // Initialize all components
     initNavigation();
+    initThemeToggle();
     initTypingEffect();
     initParticles();
     initScrollAnimations();
@@ -13,6 +14,31 @@ function initializePortfolio() {
     initCounters();
     initContactForm();
     initSmoothScrolling();
+}
+
+// Theme Toggle functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Add a small animation effect
+        themeToggle.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            themeToggle.style.transform = 'scale(1)';
+        }, 150);
+    });
 }
 
 // Navigation functionality
